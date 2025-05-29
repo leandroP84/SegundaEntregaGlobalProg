@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>Pedido.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #7a7e85;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Pedido.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">org</span><span class="s2">.</span><span class="s1">example</span><span class="s2">;</span>
+
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">time</span><span class="s2">.</span><span class="s1">LocalDate</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">time</span><span class="s2">.</span><span class="s1">LocalTime</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">util</span><span class="s2">.</span><span class="s1">Scanner</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">Pedido </span><span class="s0">extends </span><span class="s1">Base</span><span class="s2">{</span>
+    <span class="s0">private </span><span class="s1">LocalTime horaEstimadaFinalizacion</span><span class="s2">;</span>
+    <span class="s0">private double </span><span class="s1">total</span><span class="s2">;</span>
+    <span class="s0">private double </span><span class="s1">totalCosto</span><span class="s2">;</span>
+    <span class="s0">private </span><span class="s1">FormaPago formaPago</span><span class="s2">;</span>
+    <span class="s0">private </span><span class="s1">TipoEnvio tipoEnvio</span><span class="s2">;</span>
+    <span class="s0">private </span><span class="s1">LocalDate FechaPedido</span><span class="s2">;</span>
+
+    <span class="s0">private </span><span class="s1">Domicilio domicilio</span><span class="s2">; </span><span class="s3">//⬜</span>
+    <span class="s0">private </span><span class="s1">Sucursal sucursal</span><span class="s2">; </span><span class="s3">//⬜</span>
+    <span class="s0">private </span><span class="s1">Factura factura</span><span class="s2">; </span><span class="s3">//⬜</span>
+
+    <span class="s0">public </span><span class="s1">Pedido</span><span class="s2">(</span><span class="s1">LocalTime horaEstimadaFinalizacion</span><span class="s2">, </span><span class="s0">double </span><span class="s1">total</span><span class="s2">, </span><span class="s0">double </span><span class="s1">totalCosto</span><span class="s2">, </span><span class="s1">LocalDate fechaPedido</span><span class="s2">, </span><span class="s1">Sucursal sucursal</span><span class="s2">, </span><span class="s1">Domicilio domicilio</span><span class="s2">,</span><span class="s1">FormaPago formaPago</span><span class="s2">, </span><span class="s1">TipoEnvio tipoEnvio</span><span class="s2">, </span><span class="s1">DetallePedido detallePedido</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">horaEstimadaFinalizacion </span><span class="s2">= </span><span class="s1">horaEstimadaFinalizacion</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">total </span><span class="s2">= </span><span class="s1">total</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">totalCosto </span><span class="s2">= </span><span class="s1">totalCosto</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">FechaPedido </span><span class="s2">= </span><span class="s1">fechaPedido</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">sucursal </span><span class="s2">= </span><span class="s1">sucursal</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">domicilio </span><span class="s2">= </span><span class="s1">domicilio</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">formaPago </span><span class="s2">= </span><span class="s1">formaPago</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">tipoEnvio </span><span class="s2">= </span><span class="s1">tipoEnvio</span><span class="s2">;</span>
+        <span class="s1">detallePedido</span><span class="s2">.</span><span class="s1">addPedido</span><span class="s2">(</span><span class="s0">this</span><span class="s2">);</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">addFacturas</span><span class="s2">(</span><span class="s1">Factura factura</span><span class="s2">){</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">factura </span><span class="s2">= </span><span class="s1">factura</span><span class="s2">;</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+</pre>
+</body>
+</html>
