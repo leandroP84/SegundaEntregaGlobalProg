@@ -1,6 +1,12 @@
 package org.example;
 
 import java.util.ArrayList;
+import lombok.*;
+
+@Getter
+@Setter
+@ToString
+@Builder
 
 public class Articulo extends Base {
     protected String denominacion;

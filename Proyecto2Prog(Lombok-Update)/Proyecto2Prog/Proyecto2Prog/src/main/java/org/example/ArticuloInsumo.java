@@ -1,4 +1,10 @@
 package org.example;
+import lombok.*;
+
+@Getter
+@Setter
+@ToString
+@Builder
 
 public class ArticuloInsumo extends Articulo {
     private double precioCompra;

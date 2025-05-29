@@ -2,12 +2,20 @@ package org.example;
 
 import java.util.ArrayList;
 
+import lombok.*;
+
+@Getter
+@Setter
+@ToString
+@Builder
+
 public class Categoria extends Base {
     private  String denominacion;
     private ArrayList<Categoria> subCategorias;
     private ArrayList<Articulo> articulos = new ArrayList<>(); //⬜
 
     public Categoria(String denominacion, Sucursal sucursal) {
+        super();
         this.denominacion = denominacion;
         sucursal.addCategoria(this);
     }

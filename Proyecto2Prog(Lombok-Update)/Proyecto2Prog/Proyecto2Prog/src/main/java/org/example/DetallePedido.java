@@ -1,6 +1,12 @@
 package org.example;
 
 import java.util.ArrayList;
+import lombok.*;
+
+@Getter
+@Setter
+@ToString
+@Builder
 
 public class DetallePedido extends Base{
     private int cantidad;
@@ -9,6 +15,7 @@ public class DetallePedido extends Base{
     private Pedido pedido;
 
     public DetallePedido(int cantidad, double subTotal) {
+        super();
         this.cantidad = cantidad;
         this.subTotal = subTotal;
     }

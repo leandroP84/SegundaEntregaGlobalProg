@@ -2,6 +2,13 @@ package org.example;
 
 import java.time.LocalDate;
 
+import lombok.*;
+
+@Getter
+@Setter
+@ToString
+@Builder
+
 public class Factura extends Base{
     private LocalDate fechaFacturacion;
     private int mpMerchantOrderId , mpPaymentId;
@@ -11,6 +18,7 @@ public class Factura extends Base{
     private double totalVenta;
 
     public Factura(LocalDate fechaFacturacion, int mpMerchantOrderId, int mpPaymentId, String mpPreferenceId, String mpPaymentType, FormaPago formaPago, double totalVenta, Pedido pedido) {
+        super();
         this.fechaFacturacion = fechaFacturacion;
         this.mpMerchantOrderId = mpMerchantOrderId;
         this.mpPaymentId = mpPaymentId;

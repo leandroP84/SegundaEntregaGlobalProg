@@ -3,6 +3,13 @@ package org.example;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
+import lombok.*;
+
+@Getter
+@Setter
+@ToString
+@Builder
+
 public class Cliente extends Base {
     private String nombre,apellido,telefono,email;
 
@@ -14,6 +21,7 @@ public class Cliente extends Base {
     private ArrayList<Domicilio> domicilios = new ArrayList<>();//⬜
 
     public Cliente(String nombre, String apellido, String telefono, String email, LocalDate fechaNacimiento, Pedido pedido,Domicilio domicilio) {
+        super();
         this.nombre = nombre;
         this.apellido = apellido;
         this.telefono = telefono;

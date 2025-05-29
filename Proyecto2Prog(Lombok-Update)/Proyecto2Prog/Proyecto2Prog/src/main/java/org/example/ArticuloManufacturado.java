@@ -2,6 +2,13 @@ package org.example;
 
 import java.util.ArrayList;
 
+import lombok.*;
+
+@Getter
+@Setter
+@ToString
+@Builder
+
 public class ArticuloManufacturado extends Articulo{
     private String descripcion;
     private int tiempoEstimadoMinutos;

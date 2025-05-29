@@ -1,5 +1,12 @@
 package org.example;
 
+import lombok.*;
+
+@Getter
+@Setter
+@ToString
+@Builder
+
 public class ArticuloManufacturadoDetalle {
     private int cantidad;
     private ArticuloInsumo articuloInsumo;//⬜

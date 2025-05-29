@@ -1,8 +1,20 @@
 package org.example;
 
+
+
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
+
+@Getter
+@Setter
+@ToString
+@Builder
 
 public class Promocion extends Base{
     private String denominacion;
@@ -18,6 +30,7 @@ public class Promocion extends Base{
     private ArrayList<Articulo> articulos = new ArrayList<>();//⬜
 
     public Promocion(String denominacion, LocalDate fechaDesde, LocalDate fechaHasta, LocalTime horaDesde, LocalTime horaHasta, String descripcionDescuento, double precioPromocional, Sucursal sucursal,Articulo articulo) {
+        super();
         this.denominacion = denominacion;
         FechaDesde = fechaDesde;
         FechaHasta = fechaHasta;

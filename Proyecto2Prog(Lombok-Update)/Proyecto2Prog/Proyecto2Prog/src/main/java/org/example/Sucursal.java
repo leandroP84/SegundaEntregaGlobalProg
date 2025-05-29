@@ -1,7 +1,17 @@
 package org.example;
 
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
 import java.time.LocalTime;
 import java.util.ArrayList;
+
+@Getter
+@Setter
+@ToString
+@Builder
 
 public class Sucursal extends Base{
     private String nombre;
@@ -12,6 +22,7 @@ public class Sucursal extends Base{
     private ArrayList<Categoria> categorias = new ArrayList<>();//⬜
 
     public Sucursal(String nombre, Empresa empresa) {
+        super();
         this.nombre = nombre;
         HorarioApertura = LocalTime.now();
         HorarioCierre = LocalTime.now();

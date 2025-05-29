@@ -1,8 +1,17 @@
 package org.example;
+import lombok.*;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Scanner;
+
+@Getter
+@Setter
+@ToString
+@Builder
 
 public class Pedido extends Base{
     private LocalTime horaEstimadaFinalizacion;
@@ -17,6 +26,7 @@ public class Pedido extends Base{
     private Factura factura; //⬜
 
     public Pedido(LocalTime horaEstimadaFinalizacion, double total, double totalCosto, LocalDate fechaPedido, Sucursal sucursal, Domicilio domicilio,FormaPago formaPago, TipoEnvio tipoEnvio, DetallePedido detallePedido) {
+        super();
         this.horaEstimadaFinalizacion = horaEstimadaFinalizacion;
         this.total = total;
         this.totalCosto = totalCosto;
