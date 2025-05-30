@@ -1,11 +1,12 @@
 package org.example;
 
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 @Getter
 @Setter
 @ToString
-@Builder
+@SuperBuilder
 
 public abstract class Base {
     private long id;

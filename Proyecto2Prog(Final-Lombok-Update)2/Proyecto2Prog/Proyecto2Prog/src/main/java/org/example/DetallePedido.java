@@ -2,11 +2,12 @@ package org.example;
 
 import java.util.ArrayList;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 @Getter
 @Setter
 @ToString
-@Builder
+@SuperBuilder
 
 public class DetallePedido extends Base{
     private int cantidad;

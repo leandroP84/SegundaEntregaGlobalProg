@@ -4,11 +4,12 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 @Getter
 @Setter
 @ToString
-@Builder
+@SuperBuilder
 
 public class Cliente extends Base {
     private String nombre,apellido,telefono,email;
@@ -20,16 +21,6 @@ public class Cliente extends Base {
     private ArrayList<Pedido> pedidos = new ArrayList<>();//⬜
     private ArrayList<Domicilio> domicilios = new ArrayList<>();//⬜
 
-    public Cliente(String nombre, String apellido, String telefono, String email, LocalDate fechaNacimiento, Pedido pedido,Domicilio domicilio) {
-        super();
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.telefono = telefono;
-        this.email = email;
-        this.fechaNacimiento = fechaNacimiento;
-        this.pedidos.add(pedido);
-        this.domicilios.add(domicilio);
-    }
 
     public void addImagen (Imagen imagen){
         this.imagen = imagen;

@@ -4,6 +4,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import lombok.experimental.SuperBuilder;
 
 import java.time.LocalTime;
 import java.util.ArrayList;
@@ -11,7 +12,7 @@ import java.util.ArrayList;
 @Getter
 @Setter
 @ToString
-@Builder
+@SuperBuilder
 
 public class Sucursal extends Base{
     private String nombre;
@@ -20,14 +21,6 @@ public class Sucursal extends Base{
     private Domicilio domicilio; // ⬜
     private ArrayList<Promocion> promociones = new ArrayList<>(); //⬜
     private ArrayList<Categoria> categorias = new ArrayList<>();//⬜
-
-    public Sucursal(String nombre, Empresa empresa) {
-        super();
-        this.nombre = nombre;
-        HorarioApertura = LocalTime.now();
-        HorarioCierre = LocalTime.now();
-        empresa.addSucursal(this);
-    }
 
     public void addDomicilio(Domicilio domicilio){
         this.domicilio = domicilio;

@@ -4,18 +4,14 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import lombok.experimental.SuperBuilder;
 
 @Getter
 @Setter
 @ToString
-@Builder
+@SuperBuilder
 
 public class UnidadMedida extends Base{
     private String denominacion;
 
-    public UnidadMedida(String denominacion, Articulo articulo) {
-        super();
-        this.denominacion = denominacion;
-        articulo.addUnidadMedida(this);
-    }
 }

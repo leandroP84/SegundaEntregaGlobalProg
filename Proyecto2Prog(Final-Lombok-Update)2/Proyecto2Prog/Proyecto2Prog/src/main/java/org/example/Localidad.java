@@ -1,21 +1,18 @@
 package org.example;
 
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 @Getter
 @Setter
 @ToString
-@Builder
+@SuperBuilder
 
 public class Localidad extends Base{
     private String nombre;
     private Provincia provincia;
 
-    public Localidad(String nombre, Domicilio domicilio) {
-        super();
-        this.nombre = nombre;
-        domicilio.addLocalidad(this);
-    }
+
 
     public void addProvincia(Provincia provincia){
         this.provincia = provincia;

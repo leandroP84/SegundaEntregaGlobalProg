@@ -2,11 +2,12 @@ package org.example;
 
 import java.util.ArrayList;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 @Getter
 @Setter
 @ToString
-@Builder
+@SuperBuilder
 
 public class Articulo extends Base {
     protected String denominacion;
@@ -14,13 +15,6 @@ public class Articulo extends Base {
     protected UnidadMedida unidadMedida;
 
     protected ArrayList<Imagen> imagenes = new ArrayList<>();
-
-    public Articulo(String denominacion, Double precioVenta,Categoria categoria, DetallePedido detallePedido) {
-        this.denominacion = denominacion;
-        this.precioVenta = precioVenta;
-        categoria.addArticulo(this);
-        detallePedido.addArticulo(this);
-    }
 
     public void addUnidadMedida(UnidadMedida unidadMedida){
         this.unidadMedida = unidadMedida;
